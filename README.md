@@ -71,6 +71,24 @@ python -m src.predict
 
 `train.py` affiche les métriques d'évaluation (R², MAE, RMSE) puis écrit `xgb_model.pkl` et `preprocessor.pkl` dans `models/`.
 
+### Lancer l'API
+
+Le modèle est exposé via une API **FastAPI** :
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Puis :
+- `http://127.0.0.1:8000/docs` — documentation interactive pour tester la route `POST /predict`
+- `POST /predict` reçoit les 10 caractéristiques d'un pays (JSON) et renvoie le nombre d'abonnements prédit.
+
+### Tests
+
+```bash
+pytest
+```
+
 ---
 
 ## Méthode
