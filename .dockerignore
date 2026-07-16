@@ -1,0 +1,15 @@
+# Fichiers à NE PAS copier dans l'image (comme .gitignore, mais pour Docker).
+# But : une image légère qui ne contient que le nécessaire pour servir l'API.
+venv/
+__pycache__/
+*.pyc
+.git/
+.pytest_cache/
+.DS_Store
+
+# Pas utiles pour SERVIR le modèle (déjà entraîné) :
+notebooks/
+data/
+*.ipynb
+
+# On garde volontairement : app/, src/, models/, requirements-api.txt

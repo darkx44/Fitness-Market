@@ -1,0 +1,10 @@
+# Dépendances STRICTEMENT nécessaires pour faire tourner l'API en production.
+# (On n'embarque PAS jupyter, matplotlib, seaborn : inutiles pour servir des
+#  prédictions → image plus légère et plus rapide à construire.)
+fastapi>=0.110
+uvicorn>=0.29
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+xgboost>=2.0
+joblib>=1.3
