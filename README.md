@@ -4,6 +4,10 @@ Prédiction du nombre d'abonnements en salle de sport (`gym_memberships`) par pa
 
 Projet de machine learning de bout en bout : exploration des données, feature engineering, modélisation, interprétabilité (SHAP) et clustering de pays.
 
+**🚀 Démo en ligne : [fitness-market.onrender.com/docs](https://fitness-market.onrender.com/docs)** — teste la prédiction directement depuis le navigateur (route `POST /predict`).
+
+> Hébergée sur le tier gratuit de Render : la première requête après une période d'inactivité peut prendre ~30–60 s (réveil du service), puis les suivantes sont rapides.
+
 ---
 
 ## Problème
