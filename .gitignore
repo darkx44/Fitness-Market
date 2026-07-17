@@ -7,7 +7,9 @@ __pycache__/
 
 # ML / data
 data/
-models/
+# models/ est suivi volontairement : le modèle est petit (~0,5 Mo) et doit être
+# présent sur GitHub pour que l'hébergeur (Render) puisse construire l'image.
+# Pour de GROS modèles, on utiliserait plutôt un stockage externe (S3, etc.).
 
 # notebooks cache
 .ipynb_checkpoints/

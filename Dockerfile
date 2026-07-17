@@ -27,4 +27,7 @@ EXPOSE 8000
 # 6. La commande lancée au démarrage du conteneur.
 #    --host 0.0.0.0 est OBLIGATOIRE dans Docker : sans ça, l'API n'écoute
 #    que "l'intérieur" du conteneur et tu ne peux pas y accéder depuis ton Mac.
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+#    --port ${PORT:-8000} : utilise le port imposé par l'hébergeur (variable
+#    PORT) s'il existe, sinon 8000 par défaut en local. (Forme "shell" pour
+#    que ${PORT} soit bien remplacé par sa valeur.)
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}
